@@ -1,0 +1,45 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    padding: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ECF0F1;
+    border-radius: 15px;
+    width: 80%;
+    height: 50%;
+}
+
+.singUp
+{
+    display: flex;
+}
+
+.singIn
+{
+    position: absolute;
+    display: none;
+}
+
+.listaRedesSociais
+{
+    display: flex;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+}

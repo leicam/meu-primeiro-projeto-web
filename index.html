@@ -3,113 +3,73 @@
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>LOGIN</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-        <script src='main.js'></script>
-        
+        <link rel="stylesheet" href="css/style.css">
+        <title>LOGIN</title>
     </head>
 
-    <style>
-        *
-        {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body
-        {
-            background-color: #5F7C8A;
-        }
-
-        form
-        {
-            background-color: white;
-            max-width: 500px;
-            padding: 20px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        form h3
-        {
-            text-align: center;
-            color: #5F7C8A;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-        form input[type=text],
-        form input[type=password]
-        {
-            width: 100%;
-            height: 45px;
-            border: 1px solid #CCC;
-            padding-left: 10px;
-            margin: 10px 0;
-        }
-
-        form input[type=submit]
-        {
-            width: 100%;
-            height: 30px;
-            cursor: pointer;
-            background: #5F7C8A;
-            color: white;
-            border: 0;
-            border-radius: 20px;
-            transition: 30ms;
-        }
-
-        form input[type=submit]:hover
-        {
-            background-color: #4A5F6A;
-        }
-
-        form input[type=text]:focus
-        {
-            outline: 0;
-        }
-
-        form input[type=password]:focus
-        {
-            outline: 0;
-        }
-    </style>
-
     <body>
-        <form>
-            <h3>Bem vindo!</h3>
-            <input id="email" type="text" name="email" placeholder="E-mail"/>
-            <input id="password" type="password" name="senha" placeholder="Senha"/>
-            <input type="submit" name="efetuarLogin" value="Login"/>
-        </form>
+        <!--container-->
+        <div class="container">
+            <!--singUp-->
+            <div class="singUp">
+                <div class="firstColumn">
+                    <h2 class="title">Bem vindo de volta!</h2>
+                    <p class="description">Para permanecer conectado conosco por favor</p>
+                    <p class="description">efetue o login com suas informações pessoais</p>
+                    <button class="button">Sing IN</button>
+                </div>
 
-        <script>
-            var email = document.getElementById('email');
-            var password = document.getElementById('password');
+                <div class="secondColumn">
+                    <h2 class="title">Crie sua conta</h2>
+                    <div class="redesSociais">
+                        <ul class="listaRedesSociais">
+                            <li><a href="#">facebook</a></li>
+                            <li><a href="#">google</a></li>
+                            <li><a href="#">linkedin</a></li>
+                        </ul>
+                    </div>
+                    <p class="description">ou cadastre-se:</p>
+                    <form class="form">
+                        <input type="text" placeholder="Nome">
+                        <input type="email" name="" id="" placeholder="E-mail">
+                        <input type="password" name="" id="" placeholder="Password">
+                        <button class="button">Sing UP</button>
+                    </form>
+                </div>
+            </div>
+            <!--singUp-->
 
-            email.addEventListener('focus', () => 
-            {
-                email.style.borderColor = "#4A5F6A";
-            });
+            <!--singIn-->
+            <div class="singIn">
+                <div class="firstColumn">
+                    <h2 class="title">Olá, bem vindo!</h2>
+                    <p class="description">Faça seu cadastro</p>
+                    <p class="description">e começe sua jornada conosco</p>
+                    <button class="button">Sing UP</button>
+                </div>
 
-            email.addEventListener('blur', () => 
-            {
-                email.style.borderColor = "#CCC";
-            });
-
-            password.addEventListener('focus', () => 
-            {
-                password.style.borderColor = "#4A5F6A";
-            });
-
-            password.addEventListener('blur', () => 
-            {
-                password.style.borderColor = "#CCC";
-            });
-        </script>
+                <div class="secondColumn">
+                    <h2 class="title">Acesse com sua conta</h2>
+                    <div class="redesSociais">
+                        <ul class="listaRedesSociais">
+                            <li><a href="#">facebook</a></li>
+                            <li><a href="#">google</a></li>
+                            <li><a href="#">linkedin</a></li>
+                        </ul>
+                    </div>
+                    <p class="description">ou utilize seu e-mail e senha:</p>
+                    <form class="form">
+                        <input type="email" name="" id="" placeholder="E-mail">
+                        <input type="password" name="" id="" placeholder="Password">
+                        <a href="#">Esqueceu sua senha?</a>
+                        <button class="button">Sing IN</button>
+                    </form>
+                </div>
+            </div>
+            <!--singIn-->
+        </div>
+        <!--container-->
     </body>
-</html>>
+
+</html>
