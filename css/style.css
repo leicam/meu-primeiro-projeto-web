@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 *
 {
     margin: 0;
@@ -5,35 +7,128 @@
     box-sizing: border-box;
 }
 
+.body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
 .container
 {
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1000px;
-    padding: 50px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ECF0F1;
+    height: 100vh;
     border-radius: 15px;
+    background-color: #ECF0F1;
+}
+
+.content
+{
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
     width: 80%;
     height: 50%;
+    border-radius: 15px;
+    background-color: #FFF;
 }
 
-.singUp
+.content::before
+{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: #58AF9B;
+}
+
+.first-content
 {
     display: flex;
+    position: relative;
+    z-index: 1;
 }
 
-.singIn
+.second-content
 {
     position: absolute;
     display: none;
 }
 
-.listaRedesSociais
+.title
+{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title-primary
+{
+    color: #FFF;
+}
+
+.description-primary
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.description-primary
+{
+    color: #FFF;
+}
+
+.button
+{
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    color: #FFF; 
+}
+
+.button-primary
+{
+    background-color: transparent;
+    border: 1px solid #FFF;
+}
+
+.button-primary:hover
+{
+    background-color: #FFF;
+    color: #58AF9B;
+}
+
+.button-second
+{
+    background-color: #58AF9B;
+    border: 1px solid #58AF9B
+}
+
+.button-second:hover
+{
+    background-color: #FFF;
+    color: #58AF9B;
+}
+
+.first-column
+{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 1;
+    padding: 15px;
+}
+
+.second-column
+{
+    flex : 2 0 auto;
+    padding: 15px;
+}
+
+.list-social-midia
 {
     display: flex;
 }
