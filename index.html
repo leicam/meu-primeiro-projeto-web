@@ -18,7 +18,7 @@
                     <h2 class="title title-primary">Bem Vindo!</h2>
                     <p class="description description-primary">Para permanecer conectado conosco por favor</p>
                     <p class="description description-primary">efetue o login com suas informações pessoais</p>
-                    <button class="button button-primary">Sing IN</button>
+                    <button id="singIn" class="button button-primary">Acessar</button>
                 </div>
 
                 <div class="second-column">
@@ -61,7 +61,7 @@
                             <input type="password" name="" id="" placeholder="Password">
                         </label>
 
-                        <button class="button button-second">Sing UP</button>
+                        <button class="button button-second">Cadastrar</button>
                     </form>
                 </div>
             </div>
@@ -71,46 +71,58 @@
             <div class="content second-content">
                 <div class="first-column">
                     <h2 class="title title-primary">Olá, bem vindo!</h2>
-                    <p class="description">Faça seu cadastro</p>
-                    <p class="description">e começe sua jornada conosco</p>
-                    <button class="button">Sing UP</button>
+                    <p class="description description-primary">Faça seu cadastro</p>
+                    <p class="description description-primary">e começe sua jornada conosco</p>
+                    <button id="singUp" class="button button-primary">Cadastrar</button>
                 </div>
 
                 <div class="second-column">
-                    <h2 class="title">Acesse com sua conta</h2>
+                    <h2 class="title title-second">Acesse com sua conta</h2>
                     <div class="social-midia">
                         <ul class="list-social-midia">
-                            <li>
-                                <a href="#">
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
                                     <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
+                                </li>
+                            </a>
 
-                            <li>
-                                <a href="#">
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
                                     <i class="fab fa-google"></i>
-                                </a>
-                            </li>
+                                </li>
+                            </a>
 
-                            <li>
-                                <a href="#">
+                            <a class="link-social-media" href=#>
+                                <li class="item-social-media">
                                     <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
+                                </li>
+                            </a>
                         </ul>
                     </div>
-                    <p class="description">ou utilize seu e-mail e senha:</p>
+                    <p class="description description-second">ou utilize seu e-mail e senha:</p>
                     <form class="form">
-                        <input type="email" name="" id="" placeholder="E-mail">
-                        <input type="password" name="" id="" placeholder="Password">
-                        <a href="#">Esqueceu sua senha?</a>
-                        <button class="button">Sing IN</button>
+
+                        <label class="label label-input" for="">
+                            <i class="fas fa-envelope icons"></i>
+                            <input type="email" name="" id="" placeholder="E-mail">
+                        </label>
+
+                        <label class="label label-input" for="">
+                            <i class="fas fa-lock icons"></i>
+                            <input type="password" name="" id="" placeholder="Password">
+                        </label>
+
+                        <a class="description description-second" href="#">Esqueceu sua senha?</a>
+
+                        <button class="button button-second">Acessar</button>
                     </form>
                 </div>
             </div>
             <!--singIn-->
         </div>
         <!--container-->
+        
+        <script src="js/login.js"></script>
     </body>
 
 </html>

@@ -7,6 +7,12 @@
     box-sizing: border-box;
 }
 
+input:-webkit-autofill
+{
+    --webkit-box-shadow: 0 0 0px 1000px #ECF01F1 inset !important;
+    --webkit-text-fill-color: #000 !important;
+}
+
 .body
 {
     font-family: 'Open Sans', sans-serif;
@@ -40,17 +46,54 @@
     width: 40%;
     height: 100%;
     background-color: #58AF9B;
+}
+
+.sing-up .first-content .first-column,
+.sing-up .first-content .second-column
+{
+    z-index: 1;
+}
+
+.sing-up .second-content .first-column,
+.sing-up .second-content .second-column
+{
+    z-index: -1;
+}
+
+.sing-up .content::before
+{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    left: 0;
+}
+
+.sing-in .first-content .first-column,
+.sing-in .first-content .second-column
+{
+    z-index: -1;
+}
+
+.sing-in .second-content .first-column,
+.sing-in .second-content .second-column
+{
+    z-index: 1;
+}
+
+.sing-in .content::before
+{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     left: 60%;
 }
 
 .first-content
 {
     display: flex;
-    position: relative;
-    z-index: 1;
-    display: none;
+}
+
+.first-content .second-column
+{
+    z-index: 2;
 }
 
 .second-content
@@ -62,11 +105,13 @@
 .second-content .first-column
 {
     order: 2;
+    z-index: -1;
 }
 
-.second-column .second-column
+.second-content .second-column
 {
     order: 1;
+    z-index: -1;
 }
 
 .title
@@ -105,16 +150,17 @@
 
 .button
 {
-    border-radius: 15px;
-    text-transform: uppercase;
+    align-self: center;
     font-weight: bold;
-    font-size: 10px;
-    padding: 10px 50px;
+    text-transform: uppercase;
     cursor: pointer;
     color: #FFF; 
+    font-size: 10px;
+    padding: 10px 50px;
     width: 150px;
-    align-self: center;
+    border-radius: 15px;
     margin-top: 1rem;
+    transition: background-color 1s;
 }
 
 .button-primary
@@ -145,18 +191,18 @@
 .first-column
 {
     text-align: center;
-    flex: 1 0 auto;
+    width: 40%;
     z-index: 1;
     padding: 15px;
 }
 
 .second-column
 {
-    flex : 2 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 60%;
     padding: 15px;
 }
 
@@ -191,6 +237,12 @@
 .link-social-media:not(:first-child)
 {
     margin-left: 10px;
+}
+
+.link-social-media
+.item-social-media
+{
+    transition: background-color 1.5s;
 }
 
 .icons
