@@ -27,7 +27,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    width: 80%;
+    width: 960px;
     height: 50%;
     border-radius: 15px;
     background-color: #FFF;
@@ -40,6 +40,9 @@
     width: 40%;
     height: 100%;
     background-color: #58AF9B;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    left: 60%;
 }
 
 .first-content
@@ -47,12 +50,23 @@
     display: flex;
     position: relative;
     z-index: 1;
+    display: none;
 }
 
 .second-content
 {
+    display: flex;
     position: absolute;
-    display: none;
+}
+
+.second-content .first-column
+{
+    order: 2;
+}
+
+.second-column .second-column
+{
+    order: 1;
 }
 
 .title
@@ -67,6 +81,11 @@
     color: #FFF;
 }
 
+.title-second
+{
+    color:#58AF9B;
+}
+
 .description-primary
 {
     font-size: 14px;
@@ -79,6 +98,11 @@
     color: #FFF;
 }
 
+.description-second
+{
+    color: #7F8C8D;
+}
+
 .button
 {
     border-radius: 15px;
@@ -88,6 +112,9 @@
     padding: 10px 50px;
     cursor: pointer;
     color: #FFF; 
+    width: 150px;
+    align-self: center;
+    margin-top: 1rem;
 }
 
 .button-primary
@@ -111,6 +138,7 @@
 .button-second:hover
 {
     background-color: #FFF;
+    border: 1px solid #58AF9B;
     color: #58AF9B;
 }
 
@@ -125,16 +153,71 @@
 .second-column
 {
     flex : 2 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 15px;
 }
 
 .list-social-midia
 {
     display: flex;
+    list-style-type: none;
+}
+
+.item-social-media{
+    margin: 1rem 0;
+}
+
+.item-social-media
+{
+    border: 1px solid #BDC3C7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95A5A6;
+}
+
+.link-social-media:hover .item-social-media
+{
+    background-color: #58AF9B;
+    border: 1px solid #58AF9B;
+    color: #FFF;
+}
+
+.link-social-media:not(:first-child)
+{
+    margin-left: 10px;
+}
+
+.icons
+{
+    color: #7F8C8D;
+    padding: 0 5px;
+}
+
+.label-input
+{
+    display: flex;
+    align-items: center;
+    background-color: #ECF0F1;
+    margin: 8px;
 }
 
 .form
 {
     display: flex;
     flex-direction: column;
+    width: 55%;
+}
+
+.form input
+{
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #ECF0F1;
 }
