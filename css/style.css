@@ -46,7 +46,14 @@ input:-webkit-autofill
     width: 40%;
     height: 100%;
     background-color: #58AF9B;
-    animation: slideUp 1s;
+}
+
+.on-load .content::before
+{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .sing-up .first-content .first-column
@@ -79,6 +86,7 @@ input:-webkit-autofill
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     left: 0;
+    animation: slideUp 1s;
     z-index: 2;
 }
 
